@@ -1,0 +1,16 @@
+{
+  "workbench.colorCustomizations": {},
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "editor.formatOnSave": true,
+  "eslint.useFlatConfig": true,
+  "eslint.format.enable": true,
+  "editor.tabSize": 2,
+  "editor.indentSize": "tabSize",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.rulers": [120],
+  "javascript.format.enable": true
+}

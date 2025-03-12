@@ -1,0 +1,35 @@
+#Reporting files
+allure-report
+allure-results
+
+#build & packages
+node_modules
+package-lock.json
+
+# TypeScript output (JavaScript files)
+/dist/
+
+# No needed resources
+./resources/purchasedOrders.txt
+
+# Logs
+*.log
+logs/
+
+# BrowserStack files
+browserstack.err
+.DS_Store
+reports/json
+test/.DS_Store
+
+# User-specific stuff
+.idea
+.idea/**/
+
+# Notifications
+notifications/summary.json
+notifications/testReport.json
+notifications/errorLinksReport.json
+
+# CMake
+cmake-build-*/
