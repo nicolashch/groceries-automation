@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.ts",
     "prepare": "husky",
-    "format": "prettier src --write --ignore-unknown"
+    "format": "prettier src --write --ignore-unknown",
+    "test:login": "wdio run ./wdio.conf.ts --cucumberOpts.tags @login"
   },
   "keywords": [],
   "author": "",
