@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+  workflow_dispatch:
+    inputs:
+      test-script:
+        type: string
+        description: 'Run test on a specific script'
+        required: true
+        default: 'test'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 23.7.0
+          cache: 'npm' # Enable caching for npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@latest
+
+      - name: Check versions
+        run: |
+          google-chrome --version
+          chromedriver --version
+
+      - name: Run tests
+        run: npm run ${{ github.event.inputs.test-script }}
+
+      - name: Upload test results
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: ./allure-results
