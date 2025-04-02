@@ -3,6 +3,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
+  "cucumberautocomplete.steps": ["**/*steps.ts"],
+  "cucumberautocomplete.syncfeatures": "features/**/*.feature",
+  "cucumberautocomplete.strictGherkinCompletion": true,
   "editor.formatOnSave": true,
   "eslint.useFlatConfig": true,
   "eslint.format.enable": true,
