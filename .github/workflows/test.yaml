@@ -27,6 +27,12 @@ jobs:
           node-version: 23.7.0
           cache: 'npm' # Enable caching for npm
 
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
       - name: Install dependencies
         run: npm install
 
@@ -41,9 +47,21 @@ jobs:
       - name: Run tests
         run: npm run ${{ github.event.inputs.test-script }}
 
-      - name: Upload test results
-        if: failure()
+      - name: Create reports
+        if: always()
+        run: |
+          npm install -g allure-commandline --save-dev
+          allure generate ./allure-results --clean
+
+      - name: prepare artifact structure
+        if: always()
+        run: |
+          mkdir -p temp-artifact/allure-report
+          cp -R allure-report/* temp-artifact/allure-report
+
+      - name: Upload artifact for 10 days
         uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: test-results
-          path: ./allure-results
+          path: temp-artifact/allure-report
+          retention-days: 10
