@@ -28,7 +28,7 @@ jobs:
           cache: 'npm' # Enable caching for npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@latest
