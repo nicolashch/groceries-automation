@@ -8,10 +8,13 @@ on:
   workflow_dispatch:
     inputs:
       test-script:
-        type: string
-        description: 'Run test on a specific script'
+        type: choice
+        description: 'Select the test script to run' # Updated description slightly
         required: true
-        default: 'test'
+        default: 'test' # Default value must be one of the options
+        options: # Added options list
+          - test
+          - test:login # Example option 1
 
 jobs:
   build-and-test:
