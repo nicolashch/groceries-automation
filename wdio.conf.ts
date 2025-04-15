@@ -52,6 +52,16 @@ export const config: WebdriverIO.Config = {
   capabilities: [
     {
       browserName: 'chrome',
+      acceptInsecureCerts: true,
+      'wdio:enforceWebDriverClassic': true,
+      'goog:chromeOptions': {
+        args: [
+          '--headless',
+          '--no-sandbox',
+          '--disable-dev-shm-usage',
+          '--disable-gpu',
+        ],
+      },
     },
   ],
 
