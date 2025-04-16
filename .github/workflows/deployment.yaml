@@ -46,7 +46,9 @@ jobs:
           npx chromedriver --version
 
       - name: Run tests
-        run: xvfb-run --auto-servernum npm run ${{ github.event.inputs.test-script }}
+        env:
+          TEST_SCRIPT: ${{ github.event.inputs.test-script || 'test:regression' }}
+        run: xvfb-run --auto-servernum npm run ${{ env.TEST_SCRIPT  }}
 
       - name: Get Allure history
         uses: actions/checkout@v4
