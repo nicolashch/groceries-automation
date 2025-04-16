@@ -11,7 +11,7 @@ on:
         type: choice
         description: 'Select the test script to run' # Updated description slightly
         required: true
-        default: 'test' # Default value must be one of the options
+        default: 'test:regression' # Default value must be one of the options
         options: # Added options list
           - test:regression
           - test:login
@@ -45,7 +45,9 @@ jobs:
           npx chromedriver --version
 
       - name: Run tests
-        run: xvfb-run --auto-servernum npm run ${{ github.event.inputs.test-script }}
+        env:
+          TEST_SCRIPT: ${{ github.event.inputs.test-script || 'test:regression' }}
+        run: xvfb-run --auto-servernum npm run ${{ env.TEST_SCRIPT  }}
 
       - name: Create allure reports
         if: always()
