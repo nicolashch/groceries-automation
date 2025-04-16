@@ -1,5 +1,5 @@
 @regression
-Feature: Swag labs
+Feature: Login scenarios
 
   @login
   Scenario Outline: Login with different users

@@ -9,6 +9,7 @@
     "format": "prettier src --write --ignore-unknown",
     "test:regression": "wdio run ./wdio.conf.ts --cucumberOpts.tags @regression",
     "test:login": "wdio run ./wdio.conf.ts --cucumberOpts.tags @login",
+    "test:purchase": "wdio run ./wdio.conf.ts --cucumberOpts.tags @purchase",
     "report:generate": "allure generate ./allure-results --clean -o allure-report",
     "report:open": "allure open ./allure-report"
   },
