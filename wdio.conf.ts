@@ -52,6 +52,16 @@ export const config: WebdriverIO.Config = {
   capabilities: [
     {
       browserName: 'chrome',
+      acceptInsecureCerts: true,
+      'wdio:enforceWebDriverClassic': true,
+      'goog:chromeOptions': {
+        args: [
+          '--headless',
+          '--no-sandbox',
+          '--disable-dev-shm-usage',
+          '--disable-gpu',
+        ],
+      },
     },
   ],
 
@@ -114,7 +124,7 @@ export const config: WebdriverIO.Config = {
 
   //
   // The number of times to retry the entire specfile when it fails as a whole
-  // specFileRetries: 1,
+  specFileRetries: 1,
   //
   // Delay in seconds between the spec file retry attempts
   // specFileRetriesDelay: 0,
@@ -125,7 +135,18 @@ export const config: WebdriverIO.Config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  reporters: [['allure', { outputDir: 'allure-results' }]],
+  reporters: [
+    'spec',
+    [
+      'allure',
+      {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true, // Optional: Clean up report steps
+        disableWebdriverScreenshotsReporting: false, // Optional: Keep screenshots
+        useCucumberStepReporter: true, // Important for Cucumber features
+      },
+    ],
+  ],
 
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {

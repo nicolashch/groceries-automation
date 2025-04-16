@@ -1,7 +1,8 @@
-@login
+@regression
 Feature: Swag labs
 
-  Scenario Outline: As a user, I can log into the secure area
+  @login
+  Scenario Outline: Login with different users
 
     Given I am on the login page
     When I login with <username> and <password>

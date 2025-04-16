@@ -4,7 +4,6 @@ allure-results
 
 #build & packages
 node_modules
-package-lock.json
 
 # TypeScript output (JavaScript files)
 /dist/
