@@ -39,18 +39,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set up Chrome
-        uses: browser-actions/setup-chrome@latest
-
       - name: Check versions
         run: |
           google-chrome --version
-          chromedriver --version
+          npx chromedriver --version
 
       - name: Run tests
-        run: npm run ${{ github.event.inputs.test-script }}
+        run: xvfb-run --auto-servernum npm run ${{ github.event.inputs.test-script }}
 
-      - name: Create reports
+      - name: Create allure reports
         if: always()
         run: |
           npm install -g allure-commandline --save-dev
