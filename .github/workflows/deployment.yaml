@@ -40,16 +40,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set up Chrome
-        uses: browser-actions/setup-chrome@latest
-
       - name: Check versions
         run: |
           google-chrome --version
-          chromedriver --version
+          npx chromedriver --version
 
       - name: Run tests
-        run: npm run ${{ github.event.inputs.test-script }}
+        run: xvfb-run --auto-servernum npm run ${{ github.event.inputs.test-script }}
 
       - name: Get Allure history
         uses: actions/checkout@v4
