@@ -13,8 +13,8 @@ on:
         required: true
         default: 'test' # Default value must be one of the options
         options: # Added options list
-          - test
-          - test:login # Example option 1
+          - test:regression
+          - test:login
 
 jobs:
   build-and-test:
@@ -54,17 +54,12 @@ jobs:
         if: always()
         run: |
           npm install -g allure-commandline --save-dev
-          allure generate ./allure-results --clean
+          allure generate ./allure-results --clean -o allure-report
 
-      - name: prepare artifact structure
-        if: always()
-        run: |
-          mkdir -p temp-artifact/allure-report
-          cp -R allure-report/* temp-artifact/allure-report
-
-      - name: Upload artifact for 10 days
+      - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          path: temp-artifact/allure-report
+          name: allure-report
+          path: allure-report
           retention-days: 10
