@@ -1,4 +1,5 @@
 @RickAndMorty
+@regression
 Feature: Rick and morty
 
   Background:

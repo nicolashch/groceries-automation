@@ -1,4 +1,5 @@
 @api
+@regression
 Feature: JSONPlaceholder API Tests
 
   Scenario: Get all posts

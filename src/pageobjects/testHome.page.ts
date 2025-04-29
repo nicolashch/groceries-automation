@@ -28,7 +28,7 @@ class TestHomePage extends BasePage {
       return
     }
     await browser.url('https://vue-aknxx1.stackblitz.io/')
-    await browser.pause(5000)
+    await browser.pause(8000)
   }
 
   public async checkPage() {

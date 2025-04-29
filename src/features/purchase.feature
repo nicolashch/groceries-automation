@@ -1,4 +1,3 @@
-@regression
 Feature: Purchase scenarios
 
   @purchase

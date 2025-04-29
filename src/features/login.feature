@@ -1,4 +1,3 @@
-@regression
 Feature: Login scenarios
 
   @login
