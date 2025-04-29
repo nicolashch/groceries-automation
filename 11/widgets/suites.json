@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"55bf72b7e76e0cbd90ada31ad44f56bd","name":"Rick and morty","statistic":{"failed":0,"broken":1,"skipped":0,"passed":3,"unknown":0,"total":4}},{"uid":"58dad698c7a9979100602e756abe03e7","name":"JSONPlaceholder API Tests","statistic":{"failed":0,"broken":0,"skipped":0,"passed":4,"unknown":0,"total":4}}]}
