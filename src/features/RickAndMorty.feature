@@ -14,7 +14,6 @@ Feature: Rick and morty
       | name         |
       | Rick Sanchez |
       | Morty Smith  |
-      | Summer Smith |
 
   Scenario: Return to the Home page
     Given that the user is on a character details page
