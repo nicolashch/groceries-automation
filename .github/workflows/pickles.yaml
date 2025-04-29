@@ -1,4 +1,4 @@
-name: Run RickAndMorty and API Tests and Generate Allure Report
+name: Pickles
 
 on:
   push:
