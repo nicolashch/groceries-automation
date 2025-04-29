@@ -12,7 +12,7 @@ Test automation with WDIO
 1.  **Clone the repository:**
 
     ```bash
-    git clone <your-repository-url>
+    git clone git@github.com:nicolashch/test-automation-wdio.git
     cd test-automation-wdio
     ```
 
