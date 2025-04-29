@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","247","Update an existing post","","Tue Apr 29 03:27:33 GMT 2025","passed","Tue Apr 29 03:27:34 GMT 2025","","JSONPlaceholder API Tests","",""
+"","245","Create a new post","","Tue Apr 29 03:27:33 GMT 2025","passed","Tue Apr 29 03:27:33 GMT 2025","","JSONPlaceholder API Tests","",""
+"","127","Get all posts","","Tue Apr 29 03:27:33 GMT 2025","passed","Tue Apr 29 03:27:33 GMT 2025","","JSONPlaceholder API Tests","",""
+"","245","Delete a post","","Tue Apr 29 03:27:34 GMT 2025","passed","Tue Apr 29 03:27:34 GMT 2025","","JSONPlaceholder API Tests","",""
