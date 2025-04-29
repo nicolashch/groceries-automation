@@ -1,2 +1,2 @@
-# groceries-automation
-Groceries shopping automation with WDIO
+# test-automation-wdio
+Test automation with WDIO
