@@ -1,0 +1,1 @@
+[{"uid":"8540cb029a7f8adc","name":"Login with different users","time":{"start":1745897010468,"stop":1745897010804,"duration":336},"status":"passed","severity":"normal"},{"uid":"e8a2483a94bb9bbb","name":"The user adds a product to the cart","time":{"start":1745897008724,"stop":1745897010156,"duration":1432},"status":"passed","severity":"normal"}]
