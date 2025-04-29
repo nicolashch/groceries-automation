@@ -16,6 +16,8 @@ on:
           - test:regression
           - test:login
           - test:purchase
+          - test:RickAndMorty
+          - test:api
 
 jobs:
   build-and-test:
