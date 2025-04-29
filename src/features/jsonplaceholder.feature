@@ -1,6 +1,6 @@
 @api
 @regression
-Feature: JSONPlaceholder API Tests
+Feature: JSON Placeholder API Tests
 
   Scenario: Get all posts
     When I send a GET request to "/posts"
