@@ -2,10 +2,6 @@
 
 Test automation with WDIO
 
-# Groceries Automation Project
-
-This project contains automated tests for various features, including UI tests for a Rick and Morty application and API tests for JSONPlaceholder.
-
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (Version 18 or later recommended)
@@ -17,7 +13,7 @@ This project contains automated tests for various features, including UI tests f
 
     ```bash
     git clone <your-repository-url>
-    cd groceries-automation
+    cd test-automation-wdio
     ```
 
 2.  **Install dependencies:**
